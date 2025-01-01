@@ -4,6 +4,7 @@ import DrawerButton from "@/components/Drawer";
 import { MapPin } from "lucide-react";
 import { Dancing_Script } from "next/font/google"
 import Image from "next/image";
+import Head from 'next/head';
 
 const dancing = Dancing_Script({
   subsets: ['latin'], // Use 'latin' or other subsets as needed
