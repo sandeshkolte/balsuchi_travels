@@ -1,101 +1,96 @@
+"use client"
+
+import DrawerButton from "@/components/Drawer";
+import { MapPin } from "lucide-react";
+import { Dancing_Script } from "next/font/google"
 import Image from "next/image";
+
+const dancing = Dancing_Script({
+  subsets: ['latin'], // Use 'latin' or other subsets as needed
+  weight: ['400', '700'], // Specify font weights if needed
+});
+
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <>
+      <div className="bg-gray-100 h-screen" >
+        <section className=" bg-gradient-to-tr from-[#e6f8f7] to-[#f1f3e8] h-52 w-full  rounded-b-3xl" >
+          <div className={` ${dancing.className}`} >
+            <h1 className="text-4xl text-gray-800 p-5 font-bold">Balsuchi <span className="text-gray-400" >Travels</span></h1>
+          </div>
+          <p className="flex p-5 font-semibold"> <MapPin />Gadchiroli </p>
+          {/* <p className="flex px-5 text-gray-900 font-medium" >All India Permit</p> */}
+        </section>
+        <section className="bg-white m-3 rounded-3xl py-5" >
+          <h1 className="flex px-5 font-bold text-xl" >Travel Bookings</h1>
+          <div className="flex justify-around" >
+            <DrawerButton trigger={<div className="flex flex-col text-center border border-gray-300 rounded-xl" >
+              <Image src="https://png.pngtree.com/png-clipart/20230410/original/pngtree-bus-line-icon-png-image_9042516.png"
+                alt="bus"
+                width={60}
+                height={50}
+              />
+              <h1 className="text-gray-700 font-bold" >Bus</h1>
+            </div>} title={"Bus"} content={"Bus Booking"} />
+           <DrawerButton trigger={ <div className="flex flex-col text-center border border-gray-300 rounded-xl" >
+              <Image src="https://cdn1.iconfinder.com/data/icons/city-elements-02-line/128/car_conveyance_carriage_transportation_transit_automotive_vehicle_automobile-512.png"
+                alt="car"
+                width={60}
+                height={50}
+              />
+              <h1 className="text-gray-700 font-bold" >Scorpio</h1>
+            </div>} title={"Car"} content={"Car Booking"} />
+          </div>
+        </section>
+        <section className="bg-white m-3 rounded-3xl py-5" >
+          <h1 className="flex px-5 py-2 font-bold text-xl">Popular Cities</h1>
+          <div className="flex overflow-x-auto text-lg font-semibold" >
+            <div className="h-52 w-32 relative mx-2 flex-shrink-0 " >
+              <Image src="/images/varanasi.jpg"
+                alt="car"
+                className="object-cover rounded-xl h-full w-full"
+                width={80}
+                height={50} />
+              <div className="absolute bottom-0 text-white shadow-2xl bg-gradient-to-t from-gray-900 to-transparent rounded-xl p-2 h-[50%] w-full " >
+                <p className="absolute bottom-5" >Varanasi</p>
+              </div>
+            </div>
+            <div className="h-52 w-32 relative mx-2 flex-shrink-0 " >
+              <Image src="/images/mumbai.jpg"
+                alt="mumbai"
+                className="object-cover rounded-xl h-full w-full"
+                width={80}
+                height={50} />
+              <div className="absolute bottom-0 text-white shadow-2xl bg-gradient-to-t from-gray-900 to-transparent rounded-xl p-2 h-[50%] w-full " >
+              <p className="absolute bottom-5" >Mumbai</p>
+              </div>
+            </div>
+            <div className="h-52 w-32 relative mx-2  flex-shrink-0 " >
+              <Image src="/images/tirupati.jpg"
+                alt="tirupati"
+                className="object-cover rounded-xl h-full w-full"
+                width={80}
+                height={50} />
+              <div className="absolute bottom-0 text-white shadow-2xl bg-gradient-to-t from-gray-900 to-transparent rounded-xl p-2 h-[50%] w-full " >
+              <p className="absolute bottom-5" >Tirupati</p>
+              </div>
+            </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+            <div className="h-52 w-32 relative mx-2  flex-shrink-0 " >
+              <Image src="/images/mathura.jpg"
+                alt="mathura"
+                className="object-cover rounded-xl h-full w-full"
+                width={80}
+                height={50} />
+              <div className="absolute bottom-0 text-white shadow-2xl bg-gradient-to-t from-gray-900 to-transparent rounded-xl p-2 h-[50%] w-full " >
+              <p className="absolute bottom-5" >Mathura</p>
+              </div>
+            </div>
+          </div>
+
+        </section>
+      </div>
+    </>
   );
 }
