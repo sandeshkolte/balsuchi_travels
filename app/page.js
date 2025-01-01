@@ -14,6 +14,7 @@ const dancing = Dancing_Script({
 export default function Home() {
   return (
     <>
+
       <div className="bg-gray-100 h-screen" >
         <section className=" bg-gradient-to-tr from-[#e6f8f7] to-[#f1f3e8] h-52 w-full  rounded-b-3xl" >
           <div className={` ${dancing.className}`} >
