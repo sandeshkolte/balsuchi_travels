@@ -14,7 +14,28 @@ const dancing = Dancing_Script({
 export default function Home() {
   return (
     <>
-
+<Head>
+<title>Balsuchi Tours and Travels</title>
+        <meta name="description" content="Plan your dream vacation with exclusive deals and destinations from our travel agency. All over india tour." />
+        <meta name="keywords" content="travel, car, bus, scorpio, vacations, tours, destinations, travel agency" />
+  <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "TravelAgency",
+      "name": "Balsuchi",
+      "url": "https://balsuchi.vercel.app",
+      "description": "Plan your dream vacation with exclusive travel packages and destination deals.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Gadchiroli",
+        "addressLocality": "Gadchiroli",
+        "addressRegion": "AI",
+        "postalCode": "442605",
+        "addressCountry": "IN"
+      }
+    })}
+  </script>
+</Head>
       <div className="bg-gray-100 h-screen" >
         <section className=" bg-gradient-to-tr from-[#e6f8f7] to-[#f1f3e8] h-52 w-full  rounded-b-3xl" >
           <div className={` ${dancing.className}`} >
