@@ -4,7 +4,7 @@ import { getAnalytics } from "firebase/analytics";
 import { getFirestore } from "firebase/firestore"; // Import Firestore
 
 const firebaseConfig = {
-  apiKey: "AIzaSyC-18XI36ECqh4A-aNF2KNBFX5BAfWM_QA",
+  apiKey: process.env.FIREBASE_API_KEY,
   authDomain: "social-app-a6b82.firebaseapp.com",
   projectId: "social-app-a6b82",
   storageBucket: "social-app-a6b82.appspot.com",
