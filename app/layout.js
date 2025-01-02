@@ -23,6 +23,36 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+      <title>Balsuchi Tours and Travels</title>
+      <meta name="google-site-verification" content="zF9p3q_vsuUopXRVeiu0XDmQ04lzkfzf194aBhUN9G8" />
+        <meta name="google-site-verification" content="zF9p3q_vsuUopXRVeiu0XDmQ04lzkfzf194aBhUN9G8" />
+        <meta name="description" content="Plan your dream vacation with exclusive deals and destinations from our travel agency. All over india tour." />
+        <meta name="keywords" content="travel, car, balsuchi, balsuchi travels, gadchiroli travels, booking, bus, scorpio, vacations, tours, destinations, travel agency" />
+        <meta property="og:title" content="Balsuchi Tours and Travels" />
+        <meta property="og:description" content="Plan your dream vacation with us." />
+        <meta property="og:image" content="/path/to/image.jpg" />
+        <meta property="og:url" content="https://balsuchi.vercel.app" />
+        <meta name="twitter:card" content="summary_large_image" />
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "TravelAgency",
+            "name": "Balsuchi",
+            "url": "https://balsuchi.vercel.app",
+            "description": "Plan your dream vacation with exclusive travel packages and destination deals.",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Gadchiroli",
+              "addressLocality": "Gadchiroli",
+              "addressRegion": "Asia",
+              "postalCode": "442605",
+              "addressCountry": "IN"
+            }
+          })}
+        </script>
+      </head>
       <body
         className={`${poppins.className} antialiased`}>
         {children}
