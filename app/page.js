@@ -17,6 +17,7 @@ export default function Home() {
     <>
       <Head>
         <title>Balsuchi Tours and Travels</title>
+        <meta name="google-site-verification" content="zF9p3q_vsuUopXRVeiu0XDmQ04lzkfzf194aBhUN9G8" />
         <meta name="description" content="Plan your dream vacation with exclusive deals and destinations from our travel agency. All over india tour." />
         <meta name="keywords" content="travel, car, balsuchi, balsuchi travels, gadchiroli travels, booking, bus, scorpio, vacations, tours, destinations, travel agency" />
         <meta property="og:title" content="Balsuchi Tours and Travels" />
