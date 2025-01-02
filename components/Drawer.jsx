@@ -1,3 +1,5 @@
+"use client"
+
 import {
     Drawer,
     DrawerClose,
@@ -10,39 +12,66 @@ import {
   } from "@/components/ui/drawer"
   import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
+import { Button } from "./ui/button"
+import { DialogButton } from "./Dialog"
+import { useState } from "react"
 
   export default function DrawerButton({trigger,title,content}) {
+    
+    const [from, setFrom] = useState('');
+    const [to, setTo] = useState('');
+    const [departureDate, setDepartureDate] = useState('');
+
     return (
-        <Drawer >
+      <Drawer>
         <DrawerTrigger>{trigger}</DrawerTrigger>
-        <DrawerContent classname="h-56" >
-          <DrawerHeader  >
+        <DrawerContent>
+          <DrawerHeader>
             <DrawerTitle>{title}</DrawerTitle>
             <DrawerDescription>
-                <div className="text-left text-gray-800 mb-10" >
-                    <div className="py-2" >
-                <Label htmlFor="email">From</Label>
-                <Input className="text-xl" id="text" placeholder="e.g. Nagpur" />
-                    </div>
-                    <div className="py-2" >
-                <Label htmlFor="email">To</Label>
-                <Input className="text-xl" id="text" placeholder="e.g. Mumbai" />
-                    </div>
-                    <div className="py-2" >
-                <Label htmlFor="email">From</Label>
-                <Input id="text" placeholder="" />
-                    </div>
+              <div className="text-left text-gray-800 my-10">
+                <div className="py-2 flex flex-col">
+                  <Label htmlFor="from">From</Label>
+                  <input
+                    className="text-xl border-b py-2 outline-none"
+                    id="from"
+                    placeholder="e.g. Nagpur"
+                    value={from}
+                    onChange={(e) => setFrom(e.target.value)}
+                  />
                 </div>
+                <div className="py-2 flex flex-col">
+                  <Label htmlFor="to">To</Label>
+                  <input
+                    className="text-xl border-b py-2 outline-none"
+                    id="to"
+                    placeholder="e.g. Mumbai"
+                    value={to}
+                    onChange={(e) => setTo(e.target.value)}
+                  />
+                </div>
+                <div className="py-2 flex flex-col">
+                  <Label htmlFor="departureDate">Departure</Label>
+                  <input
+                    type="date"
+                    className="text-xl border-b py-2 outline-none"
+                    id="departureDate"
+                    placeholder="e.g. 2022-12-31"
+                    value={departureDate}
+                    onChange={(e) => setDepartureDate(e.target.value)}
+                  />
+                </div>
+              </div>
             </DrawerDescription>
           </DrawerHeader>
           <DrawerFooter>
-            {/* <Button>Submit</Button> */}
+            {/* <Button variant="primary" className="bg-gray-900 text-white text-lg" >Book</Button> */}
+            <DialogButton from={from} to={to} date={departureDate} />
             <DrawerClose>
               {/* <Button variant="outline">Cancel</Button> */}
             </DrawerClose>
           </DrawerFooter>
         </DrawerContent>
       </Drawer>
-      
     )
   }
