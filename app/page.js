@@ -1,5 +1,3 @@
-"use client"
-
 import DrawerButton from "@/components/Drawer";
 import { Dancing_Script } from "next/font/google"
 import Image from "next/image";
@@ -8,7 +6,6 @@ const dancing = Dancing_Script({
   subsets: ['latin'], // Use 'latin' or other subsets as needed
   weight: ['400', '700'], // Specify font weights if needed
 });
-
 
 export default function Home() {
   return (
@@ -57,22 +54,32 @@ export default function Home() {
         <section className="bg-white m-3 rounded-3xl py-5 border-[3px] border-gray-200">
           <h2 className="flex px-5 font-bold text-xl">Travel Bookings</h2>
           <div className="flex justify-around">
-            <DrawerButton trigger={<div className="flex flex-col text-center rounded-xl">
+            <DrawerButton 
+            trigger={
+            <div className="flex flex-col text-center rounded-xl">
               <Image src="https://png.pngtree.com/png-clipart/20230410/original/pngtree-bus-line-icon-png-image_9042516.png"
                 alt="bus"
                 width={60}
                 height={50}
               />
               <h3 className="text-gray-700 font-bold">Bus</h3>
-            </div>} title={"Traveller (17 seater)"} content={"Bus Booking"} />
-            <DrawerButton trigger={<div className="flex flex-col text-center rounded-xl">
+            </div>}
+            title={"Traveller (17 seater)"} 
+            content={"Bus Booking"} 
+            />
+            <DrawerButton 
+            trigger={
+            <div className="flex flex-col text-center rounded-xl">
               <Image src="https://cdn1.iconfinder.com/data/icons/city-elements-02-line/128/car_conveyance_carriage_transportation_transit_automotive_vehicle_automobile-512.png"
                 alt="car"
                 width={60}
                 height={50}
               />
               <h3 className="text-gray-700 font-bold">Car</h3>
-            </div>} title={"Scorpio"} content={"Car Booking"} />
+            </div>}
+             title={"Scorpio"} 
+             content={"Car Booking"} 
+             />
           </div>
         </section>
 
