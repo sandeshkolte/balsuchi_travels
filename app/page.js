@@ -1,10 +1,8 @@
 "use client"
 
 import DrawerButton from "@/components/Drawer";
-import { ArrowRight, MapPin, MehIcon, PersonStanding, Phone, PhoneIcon } from "lucide-react";
 import { Dancing_Script } from "next/font/google"
 import Image from "next/image";
-import Head from 'next/head';
 
 const dancing = Dancing_Script({
   subsets: ['latin'], // Use 'latin' or other subsets as needed
@@ -15,7 +13,7 @@ const dancing = Dancing_Script({
 export default function Home() {
   return (
     <>
-      <Head>
+      {/* <Head>
         <title>Balsuchi Tours and Travels</title>
         <meta name="google-site-verification" content="zF9p3q_vsuUopXRVeiu0XDmQ04lzkfzf194aBhUN9G8" />
         <meta name="description" content="Plan your dream vacation with exclusive deals and destinations from our travel agency. All over india tour." />
@@ -43,7 +41,7 @@ export default function Home() {
             }
           })}
         </script>
-      </Head>
+      </Head> */}
       <div className=" h-screen">
         <section className="bg-gradient-to-t from-gray-100 to-gray-50 h-52 w-full rounded-b-3xl flex justify-center text-center items-center">
           {/* <Image src="/images/balsuchi.png" alt="balsuchi"
