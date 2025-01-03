@@ -42,7 +42,7 @@ export default function Home() {
       </Head> */}
       <div className="h-screen">
         <section className="bg-gradient-to-t from-gray-100 to-gray-50 h-56 w-full rounded-b-3xl flex justify-center text-center items-center">
-          <Image src="/images/scorpio-bg.png" alt="scorpio"
+          <img src="/images/scorpio-bg.png" alt="scorpio"
           objectFit="cover"
           className="rounded-b-3xl h-full w-full object-cover"
                 width={100}
