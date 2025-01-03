@@ -1,10 +1,11 @@
+import DealsComponent from "@/components/DealsComponent";
 import DrawerButton from "@/components/Drawer";
 import { Dancing_Script } from "next/font/google"
 import Image from "next/image";
 
 const dancing = Dancing_Script({
   subsets: ['latin'], // Use 'latin' or other subsets as needed
-  weight: ['400', '700'], // Specify font weights if needed
+  weight: ['400','600', '700'], // Specify font weights if needed
 });
 
 export default function Home() {
@@ -39,24 +40,23 @@ export default function Home() {
           })}
         </script>
       </Head> */}
-      <div className=" h-screen">
-        <section className="bg-gradient-to-t from-gray-100 to-gray-50 h-52 w-full rounded-b-3xl flex justify-center text-center items-center">
-          {/* <Image src="/images/balsuchi.png" alt="balsuchi"
-                width={200}
-                height={50} /> */}
-          <div className={`${dancing.className}`}>
-            <h1 className="text-5xl text-gray-800 p-5 font-bold">Balsuchi <span className="text-gray-400 text-4xl">Travels</span></h1>
+      <div className="h-screen">
+        <section className="bg-gradient-to-t from-gray-100 to-gray-50 h-56 w-full rounded-b-3xl flex justify-center text-center items-center">
+          <Image src="/images/scorpio-bg.png" alt="scorpio"
+          objectFit="cover"
+          className="rounded-b-3xl h-full w-full object-cover"
+                width={100}
+                height={100} />
+          <div className={`${dancing.className} absolute top-3`}>
+            <h1 className="text-5xl text-gray-100 p-5 font-bold">Balsuchi <span className="text-neutral-800 text-4xl">Travels</span></h1>
           </div>
-          {/* <p className="flex px-5 pb-2 font-semibold"><MapPin />Gadchiroli</p>
-          <p className="flex px-5 pb-2 font-semibold"><MehIcon />Amol Borghare</p>
-          <p className="flex px-5 font-semibold"><PhoneIcon />+91</p> */}
         </section>
         <section className="bg-white m-3 rounded-3xl py-5 border-[3px] border-gray-200">
           <h2 className="flex px-5 font-bold text-xl">Travel Bookings</h2>
           <div className="flex justify-around">
             <DrawerButton 
             trigger={
-            <div className="flex flex-col text-center rounded-xl">
+            <div className="flex flex-col text-center rounded-xl border border-gray-200">
               <Image src="https://png.pngtree.com/png-clipart/20230410/original/pngtree-bus-line-icon-png-image_9042516.png"
                 alt="bus"
                 width={60}
@@ -69,7 +69,7 @@ export default function Home() {
             />
             <DrawerButton 
             trigger={
-            <div className="flex flex-col text-center rounded-xl">
+            <div className="flex flex-col text-center rounded-xl border border-gray-200">
               <Image src="https://cdn1.iconfinder.com/data/icons/city-elements-02-line/128/car_conveyance_carriage_transportation_transit_automotive_vehicle_automobile-512.png"
                 alt="car"
                 width={60}
@@ -86,7 +86,7 @@ export default function Home() {
 <section className="m-3 py-5 ">
   <h2 className="flex px-2 pt-2 font-semibold text-lg">Get-Set ready</h2>
   <p className="px-2 pb-5 text-xs">Explore top destinations with unbeatable deals.</p>
-  <div className="flex overflow-x-auto scrollbar-hide">
+  {/* <div className="flex overflow-x-auto scrollbar-hide">
             <div className="h-44 w-32 relative mx-2 flex-shrink-0">
               <Image src="/images/ujjain.avif"
                 alt="ujjain"
@@ -132,7 +132,8 @@ export default function Home() {
                 <h2 className="text-teal-900 text-sm py-1 font-semibold">₹5000</h2>
               </div>
             </div>
-            </div>
+            </div> */}
+            <DealsComponent/>
 
 </section>
 
@@ -145,7 +146,7 @@ export default function Home() {
                 className="object-cover rounded-xl h-full w-full"
                 width={80}
                 height={50} />
-              <div className="absolute bottom-0 text-white shadow-2xl bg-gradient-to-t from-gray-900 to-transparent rounded-xl p-2 h-[50%] w-full">
+              <div className="absolute bottom-0 text-white bg-gradient-to-t from-gray-900 to-transparent rounded-xl p-2 h-[50%] w-full">
                 <h3 className="absolute bottom-5">Varanasi</h3>
               </div>
             </div>
@@ -155,7 +156,7 @@ export default function Home() {
                 className="object-cover rounded-xl h-full w-full"
                 width={80}
                 height={50} />
-              <div className="absolute bottom-0 text-white shadow-2xl bg-gradient-to-t from-gray-900 to-transparent rounded-xl p-2 h-[50%] w-full">
+              <div className="absolute bottom-0 text-white bg-gradient-to-t from-gray-900 to-transparent rounded-xl p-2 h-[50%] w-full">
                 <h3 className="absolute bottom-5">Mumbai</h3>
               </div>
             </div>
@@ -165,7 +166,7 @@ export default function Home() {
                 className="object-cover rounded-xl h-full w-full"
                 width={80}
                 height={50} />
-              <div className="absolute bottom-0 text-white shadow-2xl bg-gradient-to-t from-gray-900 to-transparent rounded-xl p-2 h-[50%] w-full">
+              <div className="absolute bottom-0 text-white bg-gradient-to-t from-gray-900 to-transparent rounded-xl p-2 h-[50%] w-full">
                 <h3 className="absolute bottom-5">Tirupati</h3>
               </div>
             </div>
@@ -175,7 +176,7 @@ export default function Home() {
                 className="object-cover rounded-xl h-full w-full"
                 width={80}
                 height={50} />
-              <div className="absolute bottom-0 text-white shadow-2xl bg-gradient-to-t from-gray-900 to-transparent rounded-xl p-2 h-[50%] w-full">
+              <div className="absolute bottom-0 text-white bg-gradient-to-t from-gray-900 to-transparent rounded-xl p-2 h-[50%] w-full">
                 <h3 className="absolute bottom-5">Mathura</h3>
               </div>
             </div>

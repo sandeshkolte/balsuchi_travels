@@ -14,6 +14,10 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'wallpaperaccess.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'firebasestorage.googleapis.com',
+      },
     ],
   },
 };
