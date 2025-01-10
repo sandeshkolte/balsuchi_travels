@@ -27,8 +27,9 @@ import { useState } from "react"
         <DrawerTrigger>{trigger}</DrawerTrigger>
         <DrawerContent>
           <DrawerHeader>
-            <DrawerTitle>{title}</DrawerTitle>
-            <DrawerDescription>
+            <DrawerTitle className="flex justify-center" >{title}</DrawerTitle>
+            <DrawerDescription>Book {title} for your trip.
+            </DrawerDescription>
               <div className="text-left text-gray-800 my-10">
                 <div className="py-2 flex flex-col">
                   <Label htmlFor="from">From</Label>
@@ -62,11 +63,10 @@ import { useState } from "react"
                   />
                 </div>
               </div>
-            </DrawerDescription>
           </DrawerHeader>
           <DrawerFooter>
             {/* <Button variant="primary" className="bg-gray-900 text-white text-lg" >Book</Button> */}
-            <DialogButton from={from} to={to} date={departureDate} />
+            <DialogButton from={from} to={to} date={departureDate} via={title} />
             <DrawerClose>
               {/* <Button variant="outline">Cancel</Button> */}
             </DrawerClose>

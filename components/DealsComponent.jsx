@@ -2,15 +2,16 @@
 
 import Link from "next/link";
 import { useDeals } from "@/context/dealsContext";
+import Image from "next/image";
 
 const DealsComponent = () => {
-  const deals = useDeals();
+  const deals = useDeals();  
 
   return (
     <div className="flex overflow-x-auto scrollbar-hide">
       {deals && deals.map((deal) => (
         <Link key={deal.id} href={`/deals/${deal.id}`} className="h-44 w-32 relative mx-2 flex-shrink-0" >
-            <img
+            <Image
               src={deal.image}
               alt={deal.label}
               className="object-cover rounded-lg h-20 w-full"
