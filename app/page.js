@@ -19,7 +19,7 @@ export default function Home() {
         <meta name="keywords" content="travel, car, balsuchi, balsuchi travels, gadchiroli travels, booking, bus, scorpio, vacations, tours, destinations, travel agency" />
         <meta property="og:title" content="Balsuchi Tours and Travels" />
         <meta property="og:description" content="Plan your dream vacation with us." />
-        <meta property="og:image" content="/path/to/image.jpg" />
+        <meta property="og:image" content="opengraph-image.png" />
         <meta property="og:url" content="https://balsuchi.vercel.app" />
         <meta name="twitter:card" content="summary_large_image" />
         <link rel="icon" href="/balsuchi-logo.png" />
