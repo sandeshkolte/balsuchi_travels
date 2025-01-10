@@ -1,4 +1,6 @@
 {
+     "name": "Balsuchi",
+  "alias": ["balsuchi.vercel.app"],
     "headers": [
       {
         "source": "/(.*)",
