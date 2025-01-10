@@ -26,7 +26,7 @@ export const metadata = {
     url: "https://balsuchi.vercel.app",
     images: [
       {
-        url: "../public/images/balsuchi.png",
+        url: "/balsuchi-logo.png",
         width: 800,
         height: 600,
         alt: "Balsuchi Tours and Travels",
@@ -44,6 +44,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/balsuchi-logo.png" type="image/png" />
+      </head>
       <body
         className={`${poppins.className} antialiased`}>
         <DealsProvider>

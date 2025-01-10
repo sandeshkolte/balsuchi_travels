@@ -1,6 +1,7 @@
 import DealsComponent from "@/components/DealsComponent";
 import DrawerButton from "@/components/Drawer";
 import { Dancing_Script } from "next/font/google"
+import Head from "next/head";
 import Image from "next/image";
 
 const dancing = Dancing_Script({
@@ -11,7 +12,7 @@ const dancing = Dancing_Script({
 export default function Home() {
   return (
     <>
-      {/* <Head>
+      <Head>
         <title>Balsuchi Tours and Travels</title>
         <meta name="google-site-verification" content="zF9p3q_vsuUopXRVeiu0XDmQ04lzkfzf194aBhUN9G8" />
         <meta name="description" content="Plan your dream vacation with exclusive deals and destinations from our travel agency. All over india tour." />
@@ -21,6 +22,7 @@ export default function Home() {
         <meta property="og:image" content="/path/to/image.jpg" />
         <meta property="og:url" content="https://balsuchi.vercel.app" />
         <meta name="twitter:card" content="summary_large_image" />
+        <link rel="icon" href="/balsuchi-logo.png" />
 
         <script type="application/ld+json">
           {JSON.stringify({
@@ -39,16 +41,15 @@ export default function Home() {
             }
           })}
         </script>
-      </Head> */}
+      </Head>
       <div className="h-screen">
         <section className="bg-gradient-to-t from-gray-100 to-gray-50 h-56 w-full rounded-b-3xl flex justify-center text-center items-center">
-          <img src="/images/scorpio-bg.png" alt="scorpio"
-          objectFit="cover"
+          <img src="/bg-image.jpg" alt="vitthal"
           className="rounded-b-3xl h-full w-full object-cover"
                 width={100}
                 height={100} />
-          <div className={`${dancing.className} absolute top-3`}>
-            <h1 className="text-5xl text-gray-100 p-5 font-bold">Balsuchi <span className="text-neutral-800 text-4xl">Travels</span></h1>
+          <div className={`absolute top-3`}>
+            <h1 className="text-4xl text-gray-900 p-5 font-bold">Balsuchi</h1>
           </div>
         </section>
         <section className="bg-white m-3 rounded-3xl py-5 border-[3px] border-gray-200">
