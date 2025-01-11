@@ -27,7 +27,7 @@ import { useState } from "react"
         <DrawerTrigger>{trigger}</DrawerTrigger>
         <DrawerContent>
           <DrawerHeader>
-            <DrawerTitle className="flex justify-center" >{title}</DrawerTitle>
+          <DrawerTitle className="flex justify-center text-center w-full">{title}</DrawerTitle>
             <DrawerDescription>Book {title} for your trip.
             </DrawerDescription>
               <div className="text-left text-gray-800 my-10">

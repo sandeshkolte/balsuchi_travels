@@ -40,7 +40,7 @@ export function DialogButton({ from, to, date, via }) {
 
     console.log(name, phone, from, to, date);
     // Call a function to handle customer data submission
-    addCustomerData(name, phone, from, to, date, via);
+    // addCustomerData(name, phone, from, to, date, via);
 
     // Navigate back to the home page
     router.push("/");
