@@ -55,7 +55,7 @@ const DealPage = () => {
           </Button>
           <Image
             src={deal.image}
-            alt={deal.label}
+            alt={`Affordable travel packages for ${deal.label}`}
             className="object-cover rounded-b-xl w-full h-[500px]"
             width={800}
             height={800}

@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Balsuchi</title>
+        <title>Balsuchi Tours and Travels</title>
         <meta name="google-site-verification" content="zF9p3q_vsuUopXRVeiu0XDmQ04lzkfzf194aBhUN9G8" />
         <meta name="author" content="Balsuchi Tours and Travels" />
         <meta name="description" content="Plan your dream vacation with exclusive deals and destinations from our travel agency. All over india tour." />
