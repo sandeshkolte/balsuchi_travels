@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono,Poppins } from "next/font/google";
+import { Geist, Geist_Mono, Poppins } from "next/font/google";
 import "./globals.css";
 import { DealsProvider } from "../context/dealsContext";
 
@@ -21,7 +21,15 @@ export const metadata = {
   title: "Balsuchi Tours and Travels",
   description: "Plan your dream vacation with exclusive deals and destinations from our travel agency. All over India tour.",
   author: "Balsuchi Tours and Travels",
-  keywords: "travel, car, traveller, force, Balsuchi, balsuchi, gadchiroli tourism, gadchiroli, balsuchi travels, gadchiroli travels, seat, nagpur, booking, bus, scorpio, vacations, tours, destinations, travel agency",
+  keywords: "travel, car, traveller, force, Balsuchi Tours and Travels, Balsuchi, balsuchi, gadchiroli tourism, gadchiroli, balsuchi travels, gadchiroli travels, seat, nagpur, booking, bus, scorpio, vacations, tours, destinations, travel agency",
+  icons: {
+    icon: [
+      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "icon", href: "/favicon-32x32.png", type: "image/png", sizes: "32x32" },
+      { rel: "icon", href: "/favicon-16x16.png", type: "image/png", sizes: "16x16" },
+    ],
+    apple: "/apple-touch-icon.png",
+  },
   openGraph: {
     title: "Balsuchi Tours and Travels",
     description: "Plan your dream vacation with us.",
@@ -47,14 +55,15 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-    <title>Balsuchi Tours and Travels</title>
-        <link rel="icon" href="/balsuchi-logo.png" type="image/png" />
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
+        <link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+        <title>Balsuchi Tours and Travels</title>
       </head>
-      <body
-        className={`${poppins.className} antialiased`}>
-        <DealsProvider>
-          {children}
-        </DealsProvider>
+      <body className={`${poppins.className} antialiased`}>
+        <DealsProvider>{children}</DealsProvider>
       </body>
     </html>
   );
