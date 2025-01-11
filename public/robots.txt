@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://balsuchi.vercel.app
+
+# Sitemaps
+Sitemap: https://balsuchi.vercel.app/sitemap.xml

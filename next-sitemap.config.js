@@ -1,3 +1,5 @@
-export const siteUrl = 'https://balsuchi.vercel.app';
-export const generateRobotsTxt = true;
+module.exports = {
+    siteUrl: 'https://balsuchi.vercel.app',
+    generateRobotsTxt: true, // Generate robots.txt file
+  };
   
