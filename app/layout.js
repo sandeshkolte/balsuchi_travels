@@ -18,9 +18,10 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: "Balsuchi Tours and Travels",
+  title: "Balsuchi",
   description: "Plan your dream vacation with exclusive deals and destinations from our travel agency. All over India tour.",
-  keywords: "travel, car, balsuchi, gadchiroli tourism, gadchiroli, balsuchi travels, gadchiroli travels, seat, nagpur, booking, bus, scorpio, vacations, tours, destinations, travel agency",
+  author: "Balsuchi Tours and Travels",
+  keywords: "travel, car, traveller, force, Balsuchi, balsuchi, gadchiroli tourism, gadchiroli, balsuchi travels, gadchiroli travels, seat, nagpur, booking, bus, scorpio, vacations, tours, destinations, travel agency",
   openGraph: {
     title: "Balsuchi Tours and Travels",
     description: "Plan your dream vacation with us.",
@@ -46,6 +47,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+    <title>Balsuchi</title>
         <link rel="icon" href="/balsuchi-logo.png" type="image/png" />
       </head>
       <body
