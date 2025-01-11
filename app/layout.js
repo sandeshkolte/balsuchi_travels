@@ -18,18 +18,19 @@ const poppins = Poppins({
 });
 
 export const metadata = {
+  metadataBase: new URL("https://balsuchi.vercel.app"),
   title: "Balsuchi Tours and Travels",
   description: "Plan your dream vacation with exclusive deals and destinations from our travel agency. All over India tour.",
   author: "Balsuchi Tours and Travels",
   keywords: "travel, car, traveller, force, Balsuchi Tours and Travels, Balsuchi, balsuchi, gadchiroli tourism, gadchiroli, balsuchi travels, gadchiroli travels, seat, nagpur, booking, bus, scorpio, vacations, tours, destinations, travel agency",
-  icons: {
-    icon: [
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
-      { rel: "icon", href: "/favicon-32x32.png", type: "image/png", sizes: "32x32" },
-      { rel: "icon", href: "/favicon-16x16.png", type: "image/png", sizes: "16x16" },
-    ],
-    apple: "/apple-touch-icon.png",
-  },
+  // icons: {
+  //   icon: [
+  //     { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+  //     { rel: "icon", href: "/favicon-32x32.png", type: "image/png", sizes: "32x32" },
+  //     { rel: "icon", href: "/favicon-16x16.png", type: "image/png", sizes: "16x16" },
+  //   ],
+  //   apple: "/apple-touch-icon.png",
+  // },
   openGraph: {
     title: "Balsuchi Tours and Travels",
     description: "Plan your dream vacation with us.",

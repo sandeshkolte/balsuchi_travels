@@ -9,10 +9,10 @@ const DealsComponent = () => {
 
   return (
     <div className="flex overflow-x-auto scrollbar-hide">
-      {deals && deals.map((deal) => (
+      {deals && deals?.map((deal) => (
         <Link key={deal.id} href={`/deals/${deal.id}`} className="h-44 w-32 relative mx-2 flex-shrink-0" >
             <Image
-              src={deal.image}
+              src={deal?.image}
               alt={deal.label}
               className="object-cover rounded-lg h-20 w-full"
               width={80}

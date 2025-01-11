@@ -38,7 +38,7 @@ const DealPage = () => {
         <meta property="og:description" content={deal.description} />
         <meta property="og:image" content={deal.image} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content={`https://yourwebsite.com/deals/${id}`} />
+        <meta property="og:url" content={`https://balsuchi.vercel.app/deals/${id}`} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={deal.destination} />
         <meta name="twitter:description" content={deal.description} />
