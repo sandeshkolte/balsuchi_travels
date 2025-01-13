@@ -23,7 +23,7 @@ export const metadata = {
   title: "Balsuchi Tours and Travels",
   description: "Plan your dream vacation with exclusive deals and destinations from our travel agency. All over India tour.",
   author: "Balsuchi",
-  keywords: "travel, car, traveller, force, Balsuchi Tours and Travels, Balsuchi, balsuchi, gadchiroli tourism, gadchiroli, balsuchi travels, gadchiroli travels, seat, nagpur, booking, bus, scorpio, vacations, tours, destinations, travel agency",
+  keywords: "travel, car, traveller, force, Balsuchi Tours and Travels, Balsuchi, balsuchi, gadchiroli tourism, gadchiroli, balsuchi travels, gadchiroli travels, seat, nagpur, booking, bus, scorpio, vacations, tours, destinations, travel agency, travel, car, traveller, force, Balsuchi Tours and Travels, Balsuchi, balsuchi, gadchiroli tourism, gadchiroli, balsuchi travels, gadchiroli travels, seat, nagpur, booking, bus, scorpio, vacations, tours, destinations, travel agency, holiday packages, budget travel, luxury travel, guided tours, adventure travel, family vacations, eco-tourism, travel deals, travel offers, weekend getaways, local tours, Gadchiroli tourist spots, Gadchiroli travel guide, Nagpur tourism, Nagpur to Gadchiroli, Vidarbha tourism, Maharashtra travel destinations, unexplored Maharashtra, tribal tourism in Gadchiroli, car rentals, SUV rentals, bus booking, taxi services, local transportation, self-drive cars, Nagpur car rentals, Gadchiroli car hire, road trips in Maharashtra, cultural tours, nature tours, wildlife tours, heritage tours, spiritual tourism, trekking in Maharashtra, camping in Gadchiroli, unique travel experiences, 24/7 travel services, affordable travel agency, online travel booking, best travel agency in Nagpur, Gadchiroli trip planner, customizable travel packages, travel agency for corporate tours, school/college tours, best travel agency for Gadchiroli tourism, affordable car rental in Nagpur, family-friendly vacation spots in Maharashtra, how to book a bus from Nagpur to Gadchiroli, adventure activities in Gadchiroli, unexplored destinations near Nagpur, road trip ideas in Maharashtra",
   // icons: {
   //   icon: [
   //     { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
@@ -66,7 +66,7 @@ export default function RootLayout({ children }) {
       <body className={`${poppins.className} antialiased h-full`}>
         <div className="h-full flex flex-col ">
           {/* Fixed Header */}
-          <Header/>
+          <Header />
 
           {/* Content Area */}
           <div className="flex-grow mt-[56px] overflow-auto">
