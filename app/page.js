@@ -15,7 +15,7 @@ export default function Home() {
       <Head>
         <title>Balsuchi Tours and Travels</title>
         <meta name="google-site-verification" content="zF9p3q_vsuUopXRVeiu0XDmQ04lzkfzf194aBhUN9G8" />
-        <meta name="author" content="Balsuchi Tours and Travels" />
+        <meta name="author" content="Balsuchi" />
         <meta name="description" content="Plan your dream vacation with exclusive deals and destinations from our travel agency. All over india tour." />
         <meta name="keywords" content="travel, car, balsuchi, balsuchi travels, gadchiroli travels, booking, bus, scorpio, vacations, tours, destinations, travel agency" />
         <meta property="og:title" content="Balsuchi Tours and Travels" />
@@ -44,7 +44,7 @@ export default function Home() {
         </script>
       </Head>
       <div className="h-screen">
-        <section className="bg-gradient-to-t from-gray-100 to-gray-50 h-56 w-full rounded-b-3xl flex justify-center text-center items-center">
+        {/* <section className=" relative bg-gradient-to-t from-gray-100 to-gray-50 h-56 w-full rounded-b-3xl flex justify-center text-center items-center">
           <img src="/bg-image.jpg" alt="vitthal"
           className="rounded-b-3xl h-full w-full object-cover"
                 width={100}
@@ -52,7 +52,7 @@ export default function Home() {
           <div className={`absolute top-3`}>
             <h1 className="text-4xl text-gray-900 p-5 font-bold">Balsuchi</h1>
           </div>
-        </section>
+        </section> */}
         <section className="bg-white m-3 rounded-3xl py-5 border-[3px] border-gray-200">
           <h2 className="flex px-5 font-bold text-xl">Travel Bookings</h2>
           <div className="flex justify-around">

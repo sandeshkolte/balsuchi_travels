@@ -29,7 +29,7 @@ const DealPage = () => {
   }
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white overflow-auto">
       {/* Dynamic Metadata */}
       <Head>
         <title>{deal.destination} - ₹{deal.price}</title>
@@ -45,14 +45,9 @@ const DealPage = () => {
         <meta name="twitter:image" content={deal.image} />
       </Head>
 
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-4xl mx-auto overflow-auto">
         <div className="relative">
-          <Button
-            className="absolute top-8 left-5 bg-gray-400 p-1 bg-opacity-60 rounded-lg text-white"
-            onClick={() => window.history.back()}
-          >
-            <ArrowLeft />
-          </Button>
+          
           <Image
             src={deal.image}
             alt={`Affordable travel packages for ${deal.label}`}

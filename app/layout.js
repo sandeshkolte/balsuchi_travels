@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono, Poppins } from "next/font/google";
 import "./globals.css";
 import { DealsProvider } from "../context/dealsContext";
+import Header from "@/components/Header";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -21,7 +22,7 @@ export const metadata = {
   metadataBase: new URL("https://balsuchi.vercel.app"),
   title: "Balsuchi Tours and Travels",
   description: "Plan your dream vacation with exclusive deals and destinations from our travel agency. All over India tour.",
-  author: "Balsuchi Tours and Travels",
+  author: "Balsuchi",
   keywords: "travel, car, traveller, force, Balsuchi Tours and Travels, Balsuchi, balsuchi, gadchiroli tourism, gadchiroli, balsuchi travels, gadchiroli travels, seat, nagpur, booking, bus, scorpio, vacations, tours, destinations, travel agency",
   // icons: {
   //   icon: [
@@ -63,8 +64,16 @@ export default function RootLayout({ children }) {
         <link rel="manifest" href="/site.webmanifest" />
         <title>Balsuchi Tours and Travels</title>
       </head>
-      <body className={`${poppins.className} antialiased`}>
-        <DealsProvider>{children}</DealsProvider>
+      <body className={`${poppins.className} antialiased h-full`}>
+        <div className="h-full flex flex-col ">
+          {/* Fixed Header */}
+          <Header/>
+
+          {/* Content Area */}
+          <div className="flex-grow mt-[56px] overflow-auto">
+            <DealsProvider>{children}</DealsProvider>
+          </div>
+        </div>
       </body>
     </html>
   );
