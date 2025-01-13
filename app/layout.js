@@ -62,7 +62,6 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/site.webmanifest" />
-        <title>Balsuchi Tours and Travels</title>
       </head>
       <body className={`${poppins.className} antialiased h-full`}>
         <div className="h-full flex flex-col ">
