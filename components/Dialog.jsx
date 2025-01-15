@@ -43,7 +43,13 @@ export function DialogButton({ from, to, date, via }) {
     // addCustomerData(name, phone, from, to, date, via);
 
     // Navigate back to the home page
-    router.push("/");
+       // Navigate to the confirmation page
+       router.push("/confirmation");
+
+       // Redirect to the home page after 3 seconds
+       setTimeout(() => {
+         router.push("/");
+       }, 3000);
   };
 
   return (

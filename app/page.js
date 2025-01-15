@@ -194,7 +194,7 @@ export default function Home() {
 <section className=" m-3 py-5 ">
           <h2 className="flex  p-2 font-bold text-lg">About Us</h2>
           <div className="px-5">
-            <p className="text-gray-700 font-medium">Balsuchi Travels is a travel agency based in Gadchiroli, Maharashtra. We provide the best travel experience for our customers. We have a fleet of buses and cars for your travel needs. We provide the best travel experience for our customers. We have a fleet of buses and cars for your travel needs.</p>
+            <p className="text-gray-700 font-medium">Balsuchi Travels is a travel agency based in Gadchiroli, Maharashtra. We provide the best travel experience for our customers. We have a fleet of buses and cars for your travel needs.</p>
           </div>
 </section>
 
