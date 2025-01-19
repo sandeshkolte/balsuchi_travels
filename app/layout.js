@@ -69,7 +69,7 @@ export default function RootLayout({ children }) {
           <Header />
 
           {/* Content Area */}
-          <div className="flex-grow mt-[56px] overflow-auto">
+          <div className="flex-grow overflow-auto">
             <DealsProvider>{children}</DealsProvider>
           </div>
         </div>

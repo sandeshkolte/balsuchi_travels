@@ -3,6 +3,7 @@ import DrawerButton from "@/components/Drawer";
 import { Dancing_Script } from "next/font/google"
 import Head from "next/head";
 import Image from "next/image";
+import HeroSection from "./components/herosection";
 
 const dancing = Dancing_Script({
   subsets: ['latin'], // Use 'latin' or other subsets as needed
@@ -52,6 +53,7 @@ export default function Home() {
             <h1 className="text-4xl text-gray-900 p-5 font-bold">Balsuchi</h1>
           </div>
         </section> */}
+        <HeroSection/>
         <section className="bg-white m-3 rounded-3xl py-5 border-[3px] border-gray-200">
           <h2 className="flex px-5 font-bold text-xl">Travel Bookings</h2>
           <div className="flex justify-around">
