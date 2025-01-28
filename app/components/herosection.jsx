@@ -22,12 +22,12 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="h-screen relative">
+    <section className="md:h-screen relative">
       {isMobile ? (
-        <div className="relative h-screen" >
+        <div className="relative h-56" >
             <video
             ref={videoRef}
-            className="object-cover h-screen w-full"
+            className="object-cover h-56 w-full rounded-b-3xl"
             src="/mobile-hero.mp4"
             autoPlay
             muted
