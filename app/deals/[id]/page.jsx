@@ -51,15 +51,17 @@ const DealPage = () => {
           <Image
             src={deal.image}
             alt={`Affordable travel packages for ${deal.label}`}
-            className="object-cover rounded-b-xl w-full h-[500px]"
+            className="object-cover rounded-b-xl w-full h-[500px] p-2"
             width={800}
             height={800}
           />
-          <div className="absolute bottom-0 w-full h-52 bg-gradient-to-t from-gray-800 to-transparent"></div>
+          {/* <div className="absolute bottom-0 w-full h-52 bg-gradient-to-t from-gray-800 to-transparent"></div> */}
         </div>
         <div className="m-5">
-          <h1 className="text-2xl font-semibold text-gray-900 mb-5">{deal.destination}</h1>
-          <p className="text-gray-900 mt-2 font-semibold text-sm">Price: ₹{deal.price}</p>
+          <h1 className="text-2xl font-semibold text-gray-900 mb-2">{deal.destination}</h1>
+          <div className=" text-white bg-green-100 backdrop-blur-sm p-2 border border-green-800 rounded-xl w-36">
+          <p className="text-gray-900 font-semibold text-sm">₹{deal.price}/person</p>
+              </div>
           <p className="text-gray-700 mt-2">{deal.description}</p>
         </div>
       </div>

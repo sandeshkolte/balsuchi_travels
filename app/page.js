@@ -149,8 +149,8 @@ export default function Home() {
                 className="object-cover rounded-xl h-full w-full"
                 width={80}
                 height={50} />
-              <div className="absolute bottom-0 text-white bg-gradient-to-t from-gray-900 to-transparent rounded-xl p-2 h-[50%] w-full">
-                <h3 className="absolute bottom-5">Varanasi</h3>
+              <div className="absolute left-2 bottom-2 text-white backdrop-blur-sm p-2 border border-white rounded-xl">
+                <h3 className="text-sm font-normal ">Varanasi</h3>
               </div>
             </div>
             <div className="h-48 w-32 relative mx-2 flex-shrink-0">
@@ -159,8 +159,8 @@ export default function Home() {
                 className="object-cover rounded-xl h-full w-full"
                 width={80}
                 height={50} />
-              <div className="absolute bottom-0 text-white bg-gradient-to-t from-gray-900 to-transparent rounded-xl p-2 h-[50%] w-full">
-                <h3 className="absolute bottom-5">Mumbai</h3>
+               <div className="absolute left-2 bottom-2 text-white backdrop-blur-sm p-2 border border-white rounded-xl">
+                <h3 className="text-sm font-normal ">Mumbai</h3>
               </div>
             </div>
             <div className="h-48 w-32 relative mx-2 flex-shrink-0">
@@ -169,8 +169,8 @@ export default function Home() {
                 className="object-cover rounded-xl h-full w-full"
                 width={80}
                 height={50} />
-              <div className="absolute bottom-0 text-white bg-gradient-to-t from-gray-900 to-transparent rounded-xl p-2 h-[50%] w-full">
-                <h3 className="absolute bottom-5">Tirupati</h3>
+               <div className="absolute left-2 bottom-2 text-white backdrop-blur-sm p-2 border border-white rounded-xl">
+                <h3 className="text-sm font-normal ">Tirupati</h3>
               </div>
             </div>
             <div className="h-48 w-32 relative mx-2 flex-shrink-0">
@@ -179,8 +179,8 @@ export default function Home() {
                 className="object-cover rounded-xl h-full w-full"
                 width={80}
                 height={50} />
-              <div className="absolute bottom-0 text-white bg-gradient-to-t from-gray-900 to-transparent rounded-xl p-2 h-[50%] w-full">
-                <h3 className="absolute bottom-5">Mathura</h3>
+               <div className="absolute left-2 bottom-2 text-white backdrop-blur-sm p-2 border border-white rounded-xl">
+                <h3 className="text-sm font-normal ">Mathura</h3>
               </div>
             </div>
           </div>
