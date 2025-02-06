@@ -59,9 +59,9 @@ const DealPage = () => {
         </div>
         <div className="m-5">
           <h1 className="text-2xl font-semibold text-gray-900 mb-2">{deal.destination}</h1>
-          //<div className=" text-white //bg-green-100 backdrop-blur-sm p-2 border //border-green-800 rounded-xl w-36">
-          //<p className="text-gray-900 //font-semibold text-sm">₹{deal.price}///person</p>
-             // </div>
+          {/*<div className=" text-white //bg-green-100 backdrop-blur-sm p-2 border //border-green-800 rounded-xl w-36">
+          <p className="text-gray-90/font-semibold text-sm">₹{deal.price}/person</p>
+             // </div>*/}
           <p className="text-gray-700 mt-2">{deal.description}</p>
         </div>
       </div>
