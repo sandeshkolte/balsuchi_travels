@@ -58,10 +58,10 @@ const DealsComponent = () => {
                 <h2 className="text-gray-950 font-semibold text-sm py-2">
                   {deal.destination}
                 </h2>
-                <h2 className="text-gray-700 text-xs py-1">Start from</h2>
+               {\* <h2 className="text-gray-700 text-xs py-1">Start from</h2>
                 <h2 className="text-teal-900 text-sm py-1 font-semibold">
                   ₹{deal.price}
-                </h2>
+                </h2> */}
               </div>
             </Link>
           ))}
