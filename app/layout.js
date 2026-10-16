@@ -19,24 +19,37 @@ const poppins = Poppins({
   weight: ["400", "700"],
 });
 
+
 export const metadata = {
   metadataBase: new URL("https://balsuchi.vercel.app"),
-  title: "Balsuchi Tours and Travels",
-  description: "Plan your dream vacation with exclusive deals and destinations from our travel agency. All over India tour.",
-  author: "Balsuchi",
-  keywords: "travel, car, traveller, force, Balsuchi Tours and Travels, Balsuchi, balsuchi, gadchiroli tourism, gadchiroli, balsuchi travels, gadchiroli travels, seat, nagpur, booking, bus, scorpio, vacations, tours, destinations, travel agency, travel, car, traveller, force, Balsuchi Tours and Travels, Balsuchi, balsuchi, gadchiroli tourism, gadchiroli, balsuchi travels, gadchiroli travels, seat, nagpur, booking, bus, scorpio, vacations, tours, destinations, travel agency, holiday packages, budget travel, luxury travel, guided tours, adventure travel, family vacations, eco-tourism, travel deals, travel offers, weekend getaways, local tours, Gadchiroli tourist spots, Gadchiroli travel guide, Nagpur tourism, Nagpur to Gadchiroli, Vidarbha tourism, Maharashtra travel destinations, unexplored Maharashtra, tribal tourism in Gadchiroli, car rentals, SUV rentals, bus booking, taxi services, local transportation, self-drive cars, Nagpur car rentals, Gadchiroli car hire, road trips in Maharashtra, cultural tours, nature tours, wildlife tours, heritage tours, spiritual tourism, trekking in Maharashtra, camping in Gadchiroli, unique travel experiences, 24/7 travel services, affordable travel agency, online travel booking, best travel agency in Nagpur, Gadchiroli trip planner, customizable travel packages, travel agency for corporate tours, school/college tours, best travel agency for Gadchiroli tourism, affordable car rental in Nagpur, family-friendly vacation spots in Maharashtra, how to book a bus from Nagpur to Gadchiroli, adventure activities in Gadchiroli, unexplored destinations near Nagpur, road trip ideas in Maharashtra",
-  // icons: {
-  //   icon: [
-  //     { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
-  //     { rel: "icon", href: "/favicon-32x32.png", type: "image/png", sizes: "32x32" },
-  //     { rel: "icon", href: "/favicon-16x16.png", type: "image/png", sizes: "16x16" },
-  //   ],
-  //   apple: "/apple-touch-icon.png",
-  // },
+
+  title: {
+    default: "Balsuchi Tours and Travels",
+    template: "%s | Balsuchi Tours and Travels",
+  },
+
+  description:
+    "Plan your dream vacation with exclusive deals and destinations from Balsuchi Tours and Travels across India.",
+
+  applicationName: "Balsuchi Tours and Travels",
+
+  alternates: {
+    canonical: "/",
+  },
+
+  // Keep your existing keywords string here.
+  keywords: "Balsuchi Tours and Travels, Balsuchi, Gadchiroli travels, Nagpur tourism, car rentals, bus booking, Maharashtra tourism",
+
+  authors: [{ name: "Balsuchi Tours and Travels" }],
+
   openGraph: {
+    type: "website",
+    locale: "en_IN",
+    siteName: "Balsuchi Tours and Travels",
     title: "Balsuchi Tours and Travels",
-    description: "Plan your dream vacation with us.",
-    url: "https://balsuchi.vercel.app",
+    description:
+      "Plan your dream vacation with us. Explore tours, destinations, and travel services across India.",
+    url: "https://balsuchi.vercel.app/",
     images: [
       {
         url: "/balsuchi-logo.png",
@@ -46,18 +59,38 @@ export const metadata = {
       },
     ],
   },
+
   twitter: {
     card: "summary_large_image",
+    title: "Balsuchi Tours and Travels",
+    description: "Explore tours and travel services across India.",
+    images: ["/balsuchi-logo.png"],
   },
+
   verification: {
     google: "zF9p3q_vsuUopXRVeiu0XDmQ04lzkfzf194aBhUN9G8",
   },
 };
 
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+      
+<script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      name: "Balsuchi Tours and Travels",
+      alternateName: "Balsuchi",
+      url: "https://balsuchi.vercel.app/",
+    }),
+  }}
+/>
+
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
         <link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16" />
