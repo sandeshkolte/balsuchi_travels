@@ -9,7 +9,7 @@ export default function Header() {
   const pathname = usePathname();
 
   return (
-    <div className=" dark:bg-black backdrop-blur-md fixed top-0 left-0 w-full z-50 flex items-center">
+    <div className="fixed left-0 top-0 z-50 flex w-full items-center border-b border-[#e7dfd2]/70 bg-[#fbf5ec]/80 px-5 backdrop-blur-md sm:px-8 lg:px-12">
       {pathname !== "/" ? (
         <div className="px-2" >
           <Button
@@ -21,7 +21,7 @@ export default function Header() {
         </div>
       ) : (
         <>
-          <div className="rounded-full h-6 w-6 bg-green-200 overflow-hidden ml-4" >
+          <div className="ml-0 grid size-8 place-items-center overflow-hidden rounded-full bg-[#d8e8b0]" >
             <Image src={'/favicon-32x32.png'} height={30} width={40} className="object-cover" alt="logo" />
 
           </div>
