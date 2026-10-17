@@ -6,6 +6,11 @@ Welcome to **Balsuchi Tours and Travels**, your trusted travel partner for unfor
 
 ---
 
+## **Firebase Configuration**
+Set `NEXT_PUBLIC_FIREBASE_API_KEY` in `.env.local` for local development and in your deployment environment. This key is used by the browser-based Firebase client.
+
+---
+
 ## **Features and Services**
 - 🚍 **Fleet of Buses and Cars:** Choose from our wide range of vehicles, including luxury buses, SUVs, and sedans.
 - 🌟 **Customizable Tour Packages:** Tailor-made travel packages to suit your preferences and budget.

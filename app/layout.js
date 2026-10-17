@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono, Poppins } from "next/font/google";
+import { Geist, Geist_Mono, Poppins, Rozha_One } from "next/font/google";
 import "./globals.css";
 import { DealsProvider } from "../context/dealsContext";
 import Header from "@/components/Header";
@@ -17,6 +17,12 @@ const geistMono = Geist_Mono({
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["400", "700"],
+});
+
+const rozhaOne = Rozha_One({
+  variable: "--font-rozha-one",
+  subsets: ["devanagari", "latin"],
+  weight: ["400"],
 });
 
 
@@ -38,7 +44,7 @@ export const metadata = {
   },
 
   // Keep your existing keywords string here.
-  keywords: "Balsuchi Tours and Travels, Balsuchi, Gadchiroli travels, Nagpur tourism, car rentals, bus booking, Maharashtra tourism",
+  keywords: "Balsuchi Tours and Travels, Balsuchi, Gadchiroli travels, Nagpur tourism, car rentals, bus booking, India tourism",
 
   authors: [{ name: "Balsuchi Tours and Travels" }],
 
@@ -97,10 +103,10 @@ export default function RootLayout({ children }) {
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/site.webmanifest" />
       </head>
-      <body className={`${poppins.className} antialiased h-full`}>
+      <body className={`${poppins.className} ${rozhaOne.variable} antialiased h-full`}>
         <div className="h-full flex flex-col ">
           {/* Fixed Header */}
-          <Header />
+          <Header  />
 
           {/* Content Area */}
           <div className="flex-grow overflow-auto">

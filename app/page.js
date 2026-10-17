@@ -7,16 +7,20 @@ import { ArrowRight, BusFront, CarFront, ChevronLeft, ChevronRight, MapPin, Menu
 import DrawerButton from "@/components/Drawer";
 
 const destinations = [
-  { name: "Mahabaleshwar", region: "Satara district", image: "/images/mumbai.jpg", accent: "sage" },
-  { name: "Ajanta Caves", region: "A historic wonder", image: "/images/varanasi.jpg", accent: "lavender" },
-  { name: "Tadoba", region: "Wild at heart", image: "/images/scorpio.jpg", accent: "peach" },
-  { name: "Matheran", region: "Slow down here", image: "/images/goa.jpeg", accent: "butter" },
-  { name: "Shirdi", region: "A soulful escape", image: "/shegoan-temple.jpg", accent: "lavender" },
+  { name: "Mahabaleshwar", region: "Satara district", image: "/images/mahableshwar.jpg", accent: "sage" },
+  { name: "Ajanta Caves", region: "A historic wonder", image: "/images/ajanta.jpeg", accent: "lavender" },
+  { name: "Tadoba", region: "Wild at heart", image: "/images/tadoba.jpg", accent: "peach" },
+  { name: "Matheran", region: "Slow down here", image: "/images/matheran.jpeg", accent: "butter" },
+  { name: "Mumbai", region: "The city that never rests", image: "/images/mumbai.jpg", accent: "sage" },
+  { name: "Mathura", region: "A journey of devotion", image: "/images/mathura.jpg", accent: "peach" },
+  { name: "Varanasi", region: "Along the sacred Ganges", image: "/images/varanasi.jpg", accent: "butter" },
+  { name: "Ujjain", region: "A timeless spiritual city", image: "/images/ujjain.avif", accent: "lavender" },
+  { name: "Tirupati", region: "A blessed pilgrimage", image: "/images/tirupati.jpg", accent: "sage" },
 ];
 
 const benefits = [
   { number: "01", title: "Easy planning", text: "Thoughtful routes, simple bookings, and a team that knows the road." },
-  { number: "02", title: "Local touch", text: "Discover Maharashtra through places, stories, and stays worth remembering." },
+  { number: "02", title: "Local touch", text: "Discover India through places, stories, and stays worth remembering." },
   { number: "03", title: "Travel together", text: "Comfortable cars and buses for family escapes, celebrations, and weekends away." },
 ];
 
@@ -39,9 +43,9 @@ export default function Home() {
           <div className="max-w-2xl">
             <p className="mb-7 flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.24em] text-[#718f3d]"><Sparkles className="size-4" /> Balsuchi travels</p>
             <h1 className="font-serif text-5xl leading-[.98] tracking-[-0.05em] text-[#4f6f2d] sm:text-7xl lg:text-[6.7rem]">Take the scenic route.</h1>
-            <p className="mt-8 max-w-md text-base leading-7 text-[#727268] sm:text-lg">Journeys across Maharashtra, made warmer. Find a beautiful place to pause, wander, and feel at home.</p>
+            <p className="mt-8 max-w-md text-base leading-7 text-[#727268] sm:text-lg">Journeys across India, made warmer. Find a beautiful place to pause, wander, and feel at home.</p>
             <div className="mt-9 flex flex-wrap items-center gap-4">
-              <a href="#discover" className="group inline-flex items-center gap-3 rounded-full bg-[#5f7f31] px-6 py-3.5 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5">Explore Maharashtra <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" /></a>
+              <a href="#discover" className="group inline-flex items-center gap-3 rounded-full bg-[#5f7f31] px-6 py-3.5 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5">Explore India <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" /></a>
               <a href="#book" className="rounded-full border border-[#c4c9b4] px-6 py-3.5 text-sm font-semibold text-[#5f7f31] transition-colors hover:bg-[#edf0df]">Plan a trip</a>
             </div>
           </div>
@@ -71,7 +75,7 @@ export default function Home() {
         <div className="mx-auto grid max-w-7xl gap-4 px-5 py-7 sm:grid-cols-2 sm:px-8 lg:grid-cols-[1fr_1fr_1.2fr] lg:px-12">
           <DrawerButton trigger={<button className="flex items-center gap-4 rounded-2xl bg-[#e8efcf] p-4 text-left transition hover:-translate-y-1"><span className="grid size-11 place-items-center rounded-xl bg-[#6d8c38] text-white"><BusFront className="size-5" /></span><span><span className="block text-xs uppercase tracking-widest text-[#7b8566]">Travel by</span><span className="font-semibold text-[#4f6f2d]">Traveller bus</span></span></button>} title="Traveller (17 seater)" content="Bus Booking" />
           <DrawerButton trigger={<button className="flex items-center gap-4 rounded-2xl bg-[#f7ddca] p-4 text-left transition hover:-translate-y-1"><span className="grid size-11 place-items-center rounded-xl bg-[#ef8d5c] text-white"><CarFront className="size-5" /></span><span><span className="block text-xs uppercase tracking-widest text-[#9b806b]">Travel by</span><span className="font-semibold text-[#8b573c]">Comfortable car</span></span></button>} title="Scorpio" content="Car Booking" />
-          <div className="flex items-center gap-3 px-2 text-sm leading-6 text-[#76786b]"><MapPin className="size-5 shrink-0 text-[#718f3d]" /> Based in Gadchiroli, taking you to the best corners of Maharashtra.</div>
+          <div className="flex items-center gap-3 px-2 text-sm leading-6 text-[#76786b]"><MapPin className="size-5 shrink-0 text-[#718f3d]" /> Based in Gadchiroli, taking you to the best corners of India.</div>
         </div>
       </section>
 

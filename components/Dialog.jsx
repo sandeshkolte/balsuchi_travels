@@ -14,13 +14,16 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useState } from "react";
-import { useRouter } from "next/navigation"; // Import useRouter
+import { useRouter } from "next/navigation";
 
 export function DialogButton({ from, to, date, via }) {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [errors, setErrors] = useState({});
-  const router = useRouter(); // Initialize useRouter
+  const [submitError, setSubmitError] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const router = useRouter();
 
   const validateForm = () => {
     const newErrors = {};
@@ -30,30 +33,54 @@ export function DialogButton({ from, to, date, via }) {
     if (!/^\d{10}$/.test(phone)) {
       newErrors.phone = "Phone number must be 10 digits.";
     }
+    if (!from.trim() || !to.trim() || !date) {
+      newErrors.booking = "Please enter a starting point, destination, and departure date.";
+    }
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!validateForm()) return;
+    if (isSubmitting || !validateForm()) return;
 
-    console.log(name, phone, from, to, date);
-    // Call a function to handle customer data submission
-    // addCustomerData(name, phone, from, to, date, via);
-
-    // Navigate back to the home page
-       // Navigate to the confirmation page
-       router.push("/confirmation");
-
-       // Redirect to the home page after 3 seconds
-       setTimeout(() => {
-         router.push("/");
-       }, 3000);
+    setSubmitError("");
+    setIsSubmitting(true);
+    try {
+      const booking = {
+        name: name.trim(),
+        phone,
+        from: from.trim(),
+        to: to.trim(),
+        departureDate: date,
+        via,
+      };
+      await addCustomerData(
+        booking.name,
+        booking.phone,
+        booking.from,
+        booking.to,
+        booking.departureDate,
+        booking.via
+      );
+      sessionStorage.setItem("confirmedBooking", JSON.stringify(booking));
+      setIsOpen(false);
+      router.push("/confirmation");
+    } catch (error) {
+      console.error("Failed to save booking:", error);
+      setSubmitError("We couldn't save your booking. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
-    <Dialog>
+    <Dialog
+      open={isOpen}
+      onOpenChange={(open) => {
+        setIsOpen(open);
+      }}
+    >
       <DialogTrigger asChild>
         <Button variant="primary" className="bg-gray-900 text-white text-lg">
           Book
@@ -91,6 +118,9 @@ export function DialogButton({ from, to, date, via }) {
                 id="phone"
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
+                type="tel"
+                inputMode="numeric"
+                maxLength={10}
                 placeholder="Your phone number"
                 className={`col-span-3 ${
                   errors.phone ? "border-red-500" : ""
@@ -100,9 +130,17 @@ export function DialogButton({ from, to, date, via }) {
                 <p className="col-span-4 text-red-500 text-sm">{errors.phone}</p>
               )}
             </div>
+            {errors.booking && (
+              <p className="text-sm text-red-500" role="alert">{errors.booking}</p>
+            )}
+            {submitError && (
+              <p className="text-sm text-red-500" role="alert">{submitError}</p>
+            )}
           </div>
           <DialogFooter>
-            <Button type="submit">Book Now</Button>
+            <Button type="submit" disabled={isSubmitting}>
+              {isSubmitting ? "Saving..." : "Book Now"}
+            </Button>
           </DialogFooter>
         </form>
       </DialogContent>
